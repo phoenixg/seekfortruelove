@@ -86,5 +86,11 @@
         </dl>
     </div>
 
+    <div class="timelineMajor">
+        <h2 class="timelineMajorMarker"><span>2013年05月27日 - 2013年06月02日</span></h2>
+        <dl class="timelineMinor">
+            <dt id="mytime7"><a class="open">因程序代码无意中开源了livicons遭到作者的DMCA指控，github源码托管被冻结而导致项目开发中断</a></dt>
+        </dl>
+    </div>
 </div><!-- /#timelineContainer -->
 @endsection
