@@ -1,0 +1,36 @@
+#profile-info {
+	color: #333;
+}
+
+#profile-info strong {
+	font-size: 1.1em;
+	color: #555;
+}
+
+#profile-info .span2, #profile-info .span4, #profile-info .span10 {
+	margin:0;
+	border-collapse:collapse;
+	height: 30px;
+}
+
+#profile-info .span2 {
+	width: 20%;
+}
+
+#profile-info .span4{
+	width: 40%;
+}
+
+#profile-info .span10{
+	width: 100%;
+}
+
+#photosWrap .swipebox img {
+	border: 1px solid #CCCCCC;
+    padding: 3px;
+    background-color: #EFEECB;
+}
+
+#photosWrap{
+	text-align: center;
+}

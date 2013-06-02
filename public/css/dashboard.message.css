@@ -1,0 +1,13 @@
+#requestPersonImages table {
+	display: inline-block;
+}
+
+#requestPersonImages table img {
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+
+#requestPersonImages table tr {
+	line-height: 25px;
+	height: 25px;
+}

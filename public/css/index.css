@@ -1,0 +1,41 @@
+.hero-unit {
+    padding: 30px 20px 30px 20px;
+    text-align: center;
+}
+
+h3 .diff_title {
+    font-family: 'Leckerli One', cursive;
+}
+
+#difference > .span2{
+    border: 1px dashed #e5e5e5;
+}
+
+#difference > .span2:nth-child(1) {
+    background-color: #E3DEC1;
+}
+
+#difference > .span2:nth-child(2) {
+    background-color: #558C89;
+}
+
+#difference > .span2:nth-child(3) {
+    background-color: #E89F65;
+}
+
+#difference > .span2:nth-child(4) {
+    background-color: #47AFAF;
+}
+
+#difference > .span2:nth-child(5) {
+    background-color: #D9853B;
+}
+
+#difference > .span2 > div{
+    padding: 12px;
+}
+
+#difference > .span2 h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
