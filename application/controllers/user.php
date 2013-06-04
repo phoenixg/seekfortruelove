@@ -8,8 +8,18 @@ class User_Controller extends Base_Controller
     public $restful = true;
 
     public function get_search() {
-        return View::make('search');
-            //->with('users', User::all());
+        // 判断自己是否通过了帐号验证
+        $iamverified = DB::table('users')
+            ->where('id', '=', Auth::user()->id)
+            ->where('verified', '=', 2)
+            ->first();
+        $iamverified = empty($iamverified)? false:true;
+        if ($iamverified) {
+            return View::make('search');
+                //->with('users', User::all());
+        }
+
+        return View::make('site.pageneedverified');
     }
 
     public function post_search() {
