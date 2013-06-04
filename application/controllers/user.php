@@ -153,13 +153,21 @@ class User_Controller extends Base_Controller
     }
 
     public function get_profile($id) {
-        // TODO 检查自己有没有对他的照片查看权，如果有，则隐藏按钮，并显示彩色照片
+        // 检查自己有没有对他的照片查看权，如果有，则隐藏按钮，并显示彩色照片
+        $iamallowed = DB::table('users_infoauthed')
+            ->where('user_id', '=', $id)
+            ->where('user_info_accepted_id', '=', Auth::user()->id)
+            ->first();
+        $iamallowed = empty($iamallowed)? false:true;
 
+        // 获取征婚信息
         $user_personalad = DB::table('users_personalad')
                     ->where('user_id', '=', $id)
                     ->first();
         $user_personalad = empty($user_personalad) ? '':$user_personalad->user_personalad;
+
         return View::make('profile')
+            ->with('iamallowed', $iamallowed)
             ->with('images', User::find($id)->images)
             ->with('user_personalad', $user_personalad)
             ->with('user', User::profile($id));

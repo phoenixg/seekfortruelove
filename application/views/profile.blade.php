@@ -81,14 +81,15 @@
         </div>
     </div>
 
+    @if(!$iamallowed)
     <div class="row">
         <div class="span12">
-            @if(Auth::user()->id !== URI::segment(2))
             <a href="javascript:void(0);" id="photoRequest" class="btn btn-mini btn-success">请求彩色照片查看权</a>
-            @endif
         </div>
     </div>
+    @endif
 
+    @if($iamallowed || (Auth::user()->id == URI::segment(2)))
     <div class="row" id="photosWrap">
         <div class="span12">
             <h5><a href="javascript:void(0);" class="btn btn-mini btn-success" id="photosToggle">显示彩色照片</a></h5>
@@ -103,6 +104,7 @@
             </div>
         </div>
     </div>
+    @endif
 
     <div class="row">
         <div class="span12">
