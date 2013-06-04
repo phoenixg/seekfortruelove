@@ -164,6 +164,7 @@
 							<!-- 头像 -->
 							<ul id="thumbnails" class="thumbnails" style="margin-left:130px;">
 								<li>
+									<!-- TODO: 图片是否存在？ 不存在就用默认的图 -->
 									{{ HTML::image('/images/profile/icon/'.Auth::user()->id.'.jpg', '头像', array('id' => 'icon')) }}
 								</li>
 							</ul>

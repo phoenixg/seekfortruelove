@@ -54,6 +54,7 @@
                             <li class="@if(isset($menuflg_profile))active@endif">
                                 <a href="{{ URL::to_route('dashboard_profile') }}"><i class="icon-user@if(isset($menuflg_profile)) icon-white@endif"></i>
                                     资料
+                                    @if(isset($verified) && ($verified == 0))<span class="label label-important nav-status">未激活邮箱</span>@endif
                                     @if(isset($verified) && ($verified == 1))<span class="label label-important nav-status">等待审核</span>@endif
                                     @if(isset($verified) && ($verified == 2))<span class="label label-success nav-status">已审核</span>@endif
                                 </a>
