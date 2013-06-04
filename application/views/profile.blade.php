@@ -81,12 +81,14 @@
         </div>
     </div>
 
+    @if(Auth::user()->id !== URI::segment(2))
     @if(!$iamallowed)
     <div class="row">
         <div class="span12">
             <a href="javascript:void(0);" id="photoRequest" class="btn btn-mini btn-success">请求彩色照片查看权</a>
         </div>
     </div>
+    @endif
     @endif
 
     @if($iamallowed || (Auth::user()->id == URI::segment(2)))
