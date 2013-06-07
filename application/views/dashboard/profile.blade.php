@@ -164,8 +164,14 @@
 							<!-- 头像 -->
 							<ul id="thumbnails" class="thumbnails" style="margin-left:130px;">
 								<li>
-									<!-- TODO: 图片是否存在？ 不存在就用默认的图 -->
-									{{ HTML::image('/images/profile/icon/'.Auth::user()->id.'.jpg', '头像', array('id' => 'icon')) }}
+									<!-- 判断图片是否存在 不存在就用默认的图 -->
+									@if( File::exists( path('image_profile_icon').Auth::user()->id.'.jpg') )
+										{{ HTML::image('/images/profile/icon/'.Auth::user()->id.'.jpg', '头像', array('id' => 'icon')) }}
+									@elseif(Auth::user()->sex == '男')
+										{{ HTML::image('/images/profile/icon/'.'default.male.jpg',   '头像', array('id' => 'icon')) }}
+									@elseif(Auth::user()->sex == '女')
+										{{ HTML::image('/images/profile/icon/'.'default.female.jpg', '头像', array('id' => 'icon')) }}
+									@endif
 								</li>
 							</ul>
 
