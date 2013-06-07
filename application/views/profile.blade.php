@@ -62,6 +62,8 @@
         </div>
     </div>
 
+    <hr />
+
     <div class="row">
         <div class="span2">
             <h5>最近看过@if($user->sex == '男')他@else她@endif的人：</h5>

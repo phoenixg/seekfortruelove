@@ -34,3 +34,13 @@
 #photosWrap{
 	text-align: center;
 }
+
+/* 减小hr上下空白的间隔 */
+hr{
+	margin: 4px 0px;
+}
+
+/* 让第一个hr不要离上面的个人信息太远 */
+.thumbnails li{
+	margin-bottom: 4px;
+}
