@@ -134,7 +134,10 @@
         </div>
     </div>
 
-    @if(Auth::user()->id !== URI::segment(2))
+    <?php //var_dump(Auth::user()->id);var_dump(URI::segment(2)); ?>
+
+    <!-- login的人和该页的人是不同的两个人才行 -->
+    @if(Auth::user()->id !== (int) URI::segment(2))
     @if(!$iamallowed)
     <div class="row">
         <div class="span12">
