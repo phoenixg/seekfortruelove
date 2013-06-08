@@ -65,22 +65,8 @@
     <hr />
 
     <div class="row">
-        <div class="span2">
-            <h5>最近看过@if($user->sex == '男')他@else她@endif的人：</h5>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-        </div>
-
-        <div class="span10">
-            <strong>最近50天的登陆状态：</strong>
+        <div class="span12">
+            <strong>最近登录活跃度：</strong>
             @forelse ($d as $historyDate => $loginTimes)
                 <div class="loginHistoryBlock
                             @if($loginTimes == 1) loginHistoryBlockL1@endif
@@ -91,6 +77,15 @@
             @empty
                 <p>暂无数据</p>
             @endforelse
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <strong>最近被关注的人：</strong>
+            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
         </div>
     </div>
 

@@ -36,6 +36,11 @@
         </div>
     </div>
 
+    <div class="container" style="display:none;">
+        <div class="row">
+            <div class="span12">有什么公告我都要在这里告诉它</div>
+        </div>
+    </div>
 
     <div id="main">
         <div class="container">
