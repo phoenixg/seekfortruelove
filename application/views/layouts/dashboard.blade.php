@@ -36,11 +36,12 @@
         </div>
     </div>
 
-    <div class="container" style="display:none;">
-        <div class="row">
-            <div class="span12">有什么公告我都要在这里告诉它</div>
-        </div>
+    @if($user_notice)
+    <div class="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ $user_notice }}
     </div>
+    @endif
 
     <div id="main">
         <div class="container">

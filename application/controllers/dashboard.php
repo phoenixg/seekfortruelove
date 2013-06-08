@@ -3,15 +3,23 @@
 class Dashboard_Controller extends Base_Controller {
 
 	public $restful = true;
+	protected $user_notice;
 
 	public function __construct() {
 		$this->filter('before', 'auth');
+
+        $user_notice = DB::table('users_noticeboard')
+                    ->where('user_id', '=', Auth::user()->id)
+                    ->first();
+
+        $this->user_notice = empty($user_notice) ? '':$user_notice->user_notice;
 	}
 
 
 	public function get_index() {
 		// 应该到index去的，暂时缺省去profile
 		return View::make('dashboard.profile')
+			->with('user_notice', $this->user_notice)
 			->with('static_ethnics', DB::table('static_ethnics')->get())
 			->with('static_nationalities', DB::table('static_nationalities')->get())
 			->with('static_districts', DB::table('static_districts')->get())
@@ -32,6 +40,7 @@ class Dashboard_Controller extends Base_Controller {
 
 	public function get_profile() {
 		return View::make('dashboard.profile')
+			->with('user_notice', $this->user_notice)
 			->with('static_ethnics', DB::table('static_ethnics')->get())
 			->with('static_nationalities', DB::table('static_nationalities')->get())
 			->with('static_districts', DB::table('static_districts')->get())
@@ -48,6 +57,7 @@ class Dashboard_Controller extends Base_Controller {
 
 	public function get_personalad() {
 		return View::make('dashboard.personalad')
+			->with('user_notice', $this->user_notice)
 			->with('verified', Auth::user()->verified)
 			->with('menuflg_personalad', true);
 	}
@@ -63,6 +73,7 @@ class Dashboard_Controller extends Base_Controller {
 		}
 
 		return View::make('dashboard.message')
+			->with('user_notice', $this->user_notice)
 			->with('user_infoauth', $user_infoauth)
 			->with('verified', Auth::user()->verified)
 			->with('menuflg_message', true);
@@ -71,7 +82,7 @@ class Dashboard_Controller extends Base_Controller {
 	// 处理查看彩色照片的请求: 请求 or 忽略
 	public function post_messagegalleryauthhandle() {
 		if (!Request::ajax()) exit;
-		
+
 		$choice = Input::get('choice');
 		$userid = (int) Input::get('userid');
 
@@ -83,7 +94,7 @@ class Dashboard_Controller extends Base_Controller {
 		$user_infoauth_result = DB::table('users_infoauth')
 					->where('user_id', '=', Auth::user()->id)
 					->first();
-					
+
 		// 从infoauth表中去除这个人的请求
 		if (empty($user_infoauth_result)) {
 			$user_infoauth = array();
@@ -104,7 +115,7 @@ class Dashboard_Controller extends Base_Controller {
 				return json_encode(array('success' => true, 'msg' => '请求处理成功！'));
 				exit;
 			}
-			
+
 			// 将这个人添加进infoauthed表中
 			$exists = DB::table('users_infoauthed')
 						->where('user_id', '=', Auth::user()->id)
@@ -112,7 +123,7 @@ class Dashboard_Controller extends Base_Controller {
 						->first();
 			if ($exists) {
 				return json_encode(array('success' => true, 'msg' => '请求处理成功！'));
-				exit;	
+				exit;
 			}
 
 			$insert = DB::table('users_infoauthed')->insert(array(
@@ -129,7 +140,7 @@ class Dashboard_Controller extends Base_Controller {
 			return json_encode(array('success' => false, 'msg' => '请求处理失败！'));
 			exit;
 		}
-		
+
 		return json_encode(array('success' => false, 'msg' => '请求处理失败！'));
 		exit;
 
@@ -182,6 +193,7 @@ class Dashboard_Controller extends Base_Controller {
 
 	public function get_image() {
 		return View::make('dashboard.image')
+			->with('user_notice', $this->user_notice)
 			->with('images', Auth::user()->images()->get())
 			->with('images_num', Image::where('user_id', '=', Auth::user()->id)->count())
 			->with('verified', Auth::user()->verified)
