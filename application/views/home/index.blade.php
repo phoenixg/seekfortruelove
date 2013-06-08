@@ -59,7 +59,7 @@
 			</div>
 			<div class="span2">
 				<div>
-					<h3><span class="diff_title">4</span> 强调文字</h3>
+					<h3><span class="diff_title">4</span> 更强调文字</h3>
 					<p>仅以照片、头像作为对一个人第一印象的认知途径培养了错误的爱情观，为对抗这一交友网站的普遍做法，本站被设计为强调人与人的内心沟通，而非简单地以貌取人。</p>
 					<p>在未经对方授权情况下，您所能看到的所有照片都将以<strong>黑白素描</strong>形式显示。</p>
 				</div>
