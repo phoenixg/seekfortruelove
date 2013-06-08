@@ -163,6 +163,14 @@ class User_Controller extends Base_Controller
     }
 
     public function get_profile($id) {
+        // 如果看的人不是自己，就往关注表里插入一条查看过TA的历史信息
+        if( (int) Auth::user()->id !== (int) $id ){
+            $insert = DB::table('users_bewatched')->insert(array(
+                            'user_id' => $id,
+                            'watcher_user_id' => Auth::user()->id,
+                            'watched_date' => date('Y-m-d H:i:s')));
+        }
+
         // 检查自己有没有对他的照片查看权，如果有，则隐藏按钮，并显示彩色照片
         $iamallowed = DB::table('users_infoauthed')
             ->where('user_id', '=', $id)
@@ -193,11 +201,20 @@ class User_Controller extends Base_Controller
             }
         }
 
+        // 获取被关注的信息
+        $watchers = DB::table('users_bewatched')
+                ->where('user_id', '=', $id)
+                ->take(20)
+                ->distinct()
+                ->order_by('watched_date', 'desc')
+                ->get(array('watcher_user_id'));
+        
         return View::make('profile')
             ->with('iamallowed', $iamallowed)
             ->with('images', User::find($id)->images)
             ->with('user_personalad', $user_personalad)
             ->with('d', $d)
+            ->with('watchers', $watchers)
             ->with('user', User::profile($id));
     }
 }

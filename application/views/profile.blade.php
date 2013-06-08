@@ -61,10 +61,10 @@
             </div>
         </div>
     </div>
-
+    
     <hr />
 
-    <div class="row">
+    <div class="row loginHistory">
         <div class="span12">
             <strong>最近登录活跃度：</strong>
             @forelse ($d as $historyDate => $loginTimes)
@@ -80,43 +80,42 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row watchers">
         <div class="span12">
             <strong>最近被谁关注了：</strong>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
+            @forelse ($watchers as $watcher)
+                <a href="{{ URL::base() . '/profile/'. $watcher->watcher_user_id }}" class="" title="" target="_blank">
+                    <img src="{{ URL::base() . '/images/profile/icon/'.$watcher->watcher_user_id }}" alt="" />
+                </a>
+            @empty
+                <span>暂时没有人来看过，别着急，等会儿吧^^</span>
+            @endforelse
         </div>
     </div>
+
+    <hr />
 
     <?php //var_dump(Auth::user()->id);var_dump(URI::segment(2)); ?>
-
     <!-- login的人和该页的人是不同的两个人才行 -->
-    @if(Auth::user()->id !== (int) URI::segment(2))
-    @if(!$iamallowed)
-    <div class="row">
-        <div class="span12">
-            <a href="javascript:void(0);" id="photoRequest" class="btn btn-mini btn-success">请求彩色照片查看权</a>
-        </div>
-    </div>
-    @endif
+    @if((int) Auth::user()->id !== (int) URI::segment(2))
+        @if(!$iamallowed)
+            <a href="javascript:void(0);" id="photoRequest" 
+                class="btn btn-mini btn-success">请求彩色照片查看权</a>
+        @endif
     @endif
 
     @if($iamallowed || (Auth::user()->id == URI::segment(2)))
-    <div class="row" id="photosWrap">
-        <div class="span12">
-            <h5><a href="javascript:void(0);" class="btn btn-mini btn-success" id="photosToggle">显示彩色照片</a></h5>
-            <div id="photos">
-                @forelse ($images as $image)
-                    <a href="{{ URL::base() . '/images/profile/large/' . $image->filename }}" class="swipebox" title="">
-                        <img src="{{ URL::base() . '/images/profile/small/' . $image->filename_thumb }}" alt="" />
-                    </a>
-                @empty
-                    <p>目前暂无彩色照片</p>
-                @endforelse
-            </div>
+        <a href="javascript:void(0);" 
+                class="btn btn-mini btn-success" id="photosToggle">显示彩色照片</a>
+        <div id="photos">
+            @forelse ($images as $image)
+                <a href="{{ URL::base() . '/images/profile/large/' . $image->filename }}" class="swipebox" title="">
+                    <img src="{{ URL::base() . '/images/profile/small/' . $image->filename_thumb }}" alt="" />
+                </a>
+            @empty
+                <p>目前暂无彩色照片</p>
+            @endforelse
         </div>
-    </div>
     @endif
 
     <div class="row">

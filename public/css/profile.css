@@ -25,19 +25,25 @@
 	width: 100%;
 }
 
-#photosWrap .swipebox img {
+.swipebox img {
 	border: 1px solid #CCCCCC;
     padding: 3px;
     background-color: #EFEECB;
 }
 
-#photosWrap{
-	text-align: center;
+#photosToggle{
+	float: right;
+}
+
+/* 请求彩色照片查看权的按钮 */
+#photoRequest {
+	float: right;
 }
 
 /* 减小hr上下空白的间隔 */
 hr{
 	margin: 4px 0px;
+	border: dashed 1px #C1C1C1;
 }
 
 /* 让第一个hr不要离上面的个人信息太远 */
@@ -47,7 +53,9 @@ hr{
 
 /* login方格图的方格 */
 .loginHistoryBlock {
-	height:10px;width:10px;display:inline-block;
+	height:10px;
+	width:10px;
+	display:inline-block;
 }
 
 .loginHistoryBlockL0 {
@@ -64,4 +72,19 @@ hr{
 
 .loginHistoryBlockL3 {
 	background-color: #055927;
+}
+
+.loginHistory strong{
+	vertical-align:bottom;
+}
+
+/* 来看过TA的关注者图片 */
+.watchers img{
+	width: 40px;
+	position: relative;
+	left:-2px;
+}
+
+.watchers strong{
+	vertical-align:top;
 }
