@@ -81,56 +81,16 @@
 
         <div class="span10">
             <strong>最近50天的登陆状态：</strong>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
-            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            @forelse ($d as $historyDate => $loginTimes)
+                <div class="loginHistoryBlock
+                            @if($loginTimes == 1) loginHistoryBlockL1@endif
+                            @if($loginTimes >= 2) loginHistoryBlockL2@endif
+                            @if($loginTimes >= 5) loginHistoryBlockL3@endif
+                            @if($loginTimes == 0 || $loginTimes == null) loginHistoryBlockL0@endif
+                            "></div>
+            @empty
+                <p>暂无数据</p>
+            @endforelse
         </div>
     </div>
 

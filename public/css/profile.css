@@ -44,3 +44,24 @@ hr{
 .thumbnails li{
 	margin-bottom: 4px;
 }
+
+/* login方格图的方格 */
+.loginHistoryBlock {
+	height:10px;width:10px;display:inline-block;
+}
+
+.loginHistoryBlockL0 {
+	background-color: #A5A5A5;
+}
+
+.loginHistoryBlockL1 {
+	background-color: #2D9B59;
+}
+
+.loginHistoryBlockL2 {
+	background-color: #0C7D3A;
+}
+
+.loginHistoryBlockL3 {
+	background-color: #055927;
+}

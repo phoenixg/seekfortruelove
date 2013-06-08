@@ -159,7 +159,7 @@ class User_Controller extends Base_Controller
         }
 
         return json_encode(array('success' => false, 'msg' => '已发送过，请等待对方处理！'));
-        exit;       
+        exit;
     }
 
     public function get_profile($id) {
@@ -176,10 +176,28 @@ class User_Controller extends Base_Controller
                     ->first();
         $user_personalad = empty($user_personalad) ? '':$user_personalad->user_personalad;
 
+        // 获取login历史信息
+        $d = array();// 最近50天的日期
+        for($i = 49; $i >= 0; $i--)
+            $d[date('Y-m-d', strtotime('-'. $i .' days'))] = 0;
+
+        $login_history = DB::query("SELECT COUNT(user_id) AS login_times, DATE_FORMAT(login_at, '%Y-%m-%d') AS login_date
+                        FROM users_loginhistory
+                        WHERE user_id = ?
+                        GROUP BY login_date
+                        LIMIT 100", array($id));
+
+        foreach ($login_history as $date) {
+            if (array_key_exists($date->login_date, $d)) {
+                $d[$date->login_date] = $date->login_times;
+            }
+        }
+
         return View::make('profile')
             ->with('iamallowed', $iamallowed)
             ->with('images', User::find($id)->images)
             ->with('user_personalad', $user_personalad)
+            ->with('d', $d)
             ->with('user', User::profile($id));
     }
 }
