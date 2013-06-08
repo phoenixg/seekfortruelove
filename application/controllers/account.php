@@ -27,7 +27,7 @@ class Account_Controller extends Base_Controller
 	public function put_update()
 	{
 		echo '<pre>';print_r(Input::get());
-			
+
 		$id = trim(Input::get('id'));
 		$validation = User::validate_update(Input::all());
 
@@ -60,7 +60,7 @@ class Account_Controller extends Base_Controller
 		}
 	}
 
-	public function post_create() 
+	public function post_create()
 	{
 		$validation = User::validate(Input::all());
 
@@ -91,7 +91,7 @@ class Account_Controller extends Base_Controller
 				'blog'            => trim(Input::get('blog')),
 				'verified'		  => '0'
 			));
-			
+
 			// 插入一条明文密码记录以便查询
 			DB::table('users_pw')->insert( array(
 							'user_id' => $user->id,
@@ -103,7 +103,7 @@ class Account_Controller extends Base_Controller
 
 			// 爱因斯坦也猜不到
 			$key = md5(Config::get('application.key') . $user->id);
-			
+
 			$sexTitle = trim(Input::get('sex'))  == '男' ? '弟兄'  : '姊妹';
 
 			$messageBody = '<html><head></head><body>
@@ -166,16 +166,18 @@ class Account_Controller extends Base_Controller
 	{
 		$credentials = array(
 			'username' => strtolower(Input::get('email')),
-			'password' => Input::get('password') 
+			'password' => Input::get('password')
 		);
 
 		if(Auth::attempt($credentials))
 		{
-			//return Redirect::to_route('search');
+			// 记录一下login历史
+			$responses = Event::fire('logined', array(Auth::user()->id));
+
 			return Redirect::to('search');
 			exit;
 		}
-		
+
 		return Redirect::to_route('login');
 			//->with('login_errors', true);
 	}

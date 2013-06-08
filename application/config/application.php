@@ -17,7 +17,7 @@ return array(
 	//'url' => 'http://www.seekfortruelove.org',
 	//'url' => 'http://truelove',  //apache项目路径设置直接指向了public目录
 	'url' => 'http://seekfortruelove',  //apache项目路径设置直接指向了public目录
-	//'url' => 'http://localhost/truelove/public',
+	//'url' => 'http://localhost/seekfortruelove/public',
 	/*
 	|--------------------------------------------------------------------------
 	| Asset URL

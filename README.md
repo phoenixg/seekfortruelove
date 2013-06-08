@@ -50,6 +50,13 @@ TRUELOVE
             2 账号已注册，已激活邮箱，已审核资料 [都可以，即能被搜索到]
             9 账号被封禁 [都不能]
 
+##### 登陆状态方格图的颜色代码 #####
+    #2D9B59 最浅
+    #0C7D3A
+    #055927 最深
+    #A5A5A5 灰色
+
+
 ## 问题解决 ##
 1 使用artisan安装bundles的时候，提示`“The bundle API is not responding.”`的解决方法 （ 参考了：http://forums.laravel.io/viewtopic.php?id=1835 ）
 

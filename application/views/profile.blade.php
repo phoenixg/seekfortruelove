@@ -80,7 +80,52 @@
         </div>
 
         <div class="span10">
-            <h5>登录活跃历史的方格图，类似github</h5>
+            <strong>最近50天的登陆状态：</strong>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
+            <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
             <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>
             <div style="height:10px;width:10px;background-color:gray;display:inline-block;"></div>
             <div style="height:10px;width:10px;background-color:blue;display:inline-block;"></div>

@@ -120,6 +120,15 @@ Event::listen('500', function($exception)
 	return Response::error('500');
 });
 
+// 用户一login就插入login历史数据以便统计
+Event::listen('logined', function($userId)
+{
+    DB::table('users_loginhistory')->insert( array(
+                    'user_id'  => $userId,
+                    'login_at' => date('Y-m-d H:i:s')
+    ));
+});
+
 /*
 |--------------------------------------------------------------------------
 | 路由过滤器
