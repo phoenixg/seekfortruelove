@@ -82,7 +82,7 @@
 
     <div class="row">
         <div class="span12">
-            <strong>最近被关注的人：</strong>
+            <strong>最近被谁关注了：</strong>
             <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
             <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
             <div style="height:10px;width:10px;background-color:red;display:inline-block;"></div>
