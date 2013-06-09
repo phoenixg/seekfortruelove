@@ -23,10 +23,47 @@ class Account_Controller extends Base_Controller
 			->with('static_salaries', 		DB::table('static_salaries')->get());
 	}
 
+	// 处理修改密码的请求
+	public function put_changepassword()
+	{
+		if(!Auth::check()){
+			return Redirect::to_route('login');
+		}
+
+		$validation = User::validate_changepassword(Input::all());
+
+		if ($validation->fails()) {
+			return Redirect::to_route('dashboard_miscellaneous')
+					->with_errors($validation);
+		} else {
+			// 旧密码输入错误
+			$correct = Hash::check(Input::get('password_old'), Auth::user()->password);
+			if ( !$correct ) {
+				Session::flash('old_password_error', '旧密码输入错误！');
+				return Redirect::to_route('dashboard_miscellaneous');
+			}
+
+			// 旧密码输入正确，更新新密码
+			$update = User::update(Auth::user()->id, array(
+							'password' => Hash::make(Input::get('password')))
+			);
+
+		    $affect = DB::table('users_pw')
+		    	->where('user_id', '=', Auth::user()->id)
+		    	->update(array('user_pw' => Input::get('password')));
+
+		    if ($update) {
+		    	Session::flash('change_password_success', '密码修改成功！');
+		    }
+
+		    return Redirect::to_route('dashboard_miscellaneous');
+		}
+	}
+
 	// 如果用户手动更改put的id值，会不会有危险，即更改了其他人的资料
 	public function put_update()
 	{
-		echo '<pre>';print_r(Input::get());
+		//echo '<pre>';print_r(Input::get());die;
 
 		$id = trim(Input::get('id'));
 		$validation = User::validate_update(Input::all());

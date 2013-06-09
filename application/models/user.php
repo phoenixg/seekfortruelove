@@ -1,9 +1,9 @@
 <?php
-      
+
 class User extends Eloquent{
 
 	public static $timestamps = true;
-	
+
 	public static $rules = array(
 		'email'          => 'required|min:5|max:100|email|unique:users',
 		'password'       => 'required|min:6|max:20|confirmed',
@@ -25,7 +25,7 @@ class User extends Eloquent{
 		'companytype'    => 'required',
 		'salary'         => 'required',
 		'blog'           => 'min:2|max:100|active_url',
-		'terms'          => 'accepted'		
+		'terms'          => 'accepted'
 	);
 
 	public static $rules_update = array(
@@ -49,6 +49,10 @@ class User extends Eloquent{
 		'blog'           => 'min:2|max:100'
 	);
 
+	public static $rules_changepassword = array(
+		'password'   => 'required|min:6|max:20|confirmed',
+	);
+
 	public function images()
 	{
 		return $this->has_many('Image');
@@ -62,6 +66,9 @@ class User extends Eloquent{
 		return Validator::make($data, static::$rules_update);
 	}
 
+	public static function validate_changepassword($data) {
+		return Validator::make($data, static::$rules_changepassword);
+	}
 
 	public static function profile($uid){
 	        return DB::table('users')

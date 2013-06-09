@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".btn-danger").click(function() {
+	$(".btn-danger, .close").click(function() {
 		$(".alert").alert('close');
 	});
 

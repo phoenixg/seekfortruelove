@@ -9,6 +9,7 @@ Route::get('/', array('as' => 'home', function()
 Route::get('register',               array('as' => 'register',                                      'uses' => 'account@register'));
 Route::post('create',                array('as' => 'create',                                        'uses' => 'account@create'));
 Route::put('update',                 array('as' => 'update',                 'before' => 'csrf',    'uses' => 'account@update'));
+Route::put('changepassword',         array('as' => 'changepassword',         'before' => 'csrf',    'uses' => 'account@changepassword'));
 Route::get('verifymail',             array('as' => 'verifymail',                                    'uses' => 'account@verifymail'));
 Route::get('verify/(:all)',          array('as' => 'verify',                                        'uses' => 'account@verify'));
 Route::get('welcome',                array('as' => 'welcome',                                       'uses' => 'account@welcome'));

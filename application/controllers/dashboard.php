@@ -8,11 +8,13 @@ class Dashboard_Controller extends Base_Controller {
 	public function __construct() {
 		$this->filter('before', 'auth');
 
-        $user_notice = DB::table('users_noticeboard')
-                    ->where('user_id', '=', Auth::user()->id)
-                    ->first();
+		if(!Auth::guest()){
+	        $user_notice = DB::table('users_noticeboard')
+	                    ->where('user_id', '=', Auth::user()->id)
+	                    ->first();
 
-        $this->user_notice = empty($user_notice) ? '':$user_notice->user_notice;
+	        $this->user_notice = empty($user_notice) ? '':$user_notice->user_notice;
+		}
 	}
 
 

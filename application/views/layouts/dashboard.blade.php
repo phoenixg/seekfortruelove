@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>SEEK FOR TRUELOVE</title>
+    <title>SEEK FOR TRUELOVE -- 控制面板</title>
 
     <!-- favicon -->
     <link id="favicon" href="favicon.ico" rel="icon" type="image/x-icon" />
