@@ -39,3 +39,9 @@ h3 .diff_title {
     font-size: 22px;
     font-weight: bold;
 }
+
+#browser-promote a {
+    color:#eeeeee;
+    text-decoration: underline;
+    font-weight: bold;
+}

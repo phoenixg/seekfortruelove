@@ -1,5 +1,11 @@
 $(document).ready(function() {
+	// 隐藏footer
 	$('.footer').show();
+
+	// 对IE版本进行检测
+	if($.browser.msie != undefined){
+		$('#browser-promote').show();
+	};
 
 	// 原则自动变色
 	var colorScheme = [['#ff4040', '#ff7373', '#ff0000', '#bf3030', '#a60000'],
@@ -10,11 +16,11 @@ $(document).ready(function() {
 					   ['#9f3ed5', '#ad66d5', '#7109aa', '#5f2580', '#48036f'],
 					   ['#d60062', '#4312ae', '#154f55', '#d42b28', '#6c43ce']];
 	console.log(colorScheme);
-	var changeColor = window.setInterval(function (){  
+	var changeColor = window.setInterval(function (){
 	    $('#difference > .span2:nth-child(1)').hide();
 
 
-	}, 1000);  
+	}, 1000);
 
 
 });

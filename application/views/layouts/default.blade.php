@@ -30,6 +30,16 @@
 <body>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
+			<div class="alert" id="browser-promote" style="display:none;">
+			        <button data-dismiss="alert" class="close" type="button">×</button>
+			        <span>
+			        	您的IE浏览器版本过低，可能影响正常使用本站，建议使用更加优秀的&nbsp;
+						<a href="http://www.google.com.hk/chrome/intl/zh-CN/landing_chrome.html" target="_blank">Chrome</a>,&nbsp;
+						<a href="http://firefox.com.cn/download/" target="_blank">Firefox</a>,&nbsp;
+						<a href="http://www.apple.com.cn/safari/" target="_blank">Safari</a>&nbsp;等浏览器浏览本站
+			        </span>
+			</div>
+
 			<div class="container">
 				{{ HTML::link_to_route('home', 'Seek For Truelove', array() , array('class' => 'brand')) }}
 
