@@ -13,23 +13,23 @@ h3 .diff_title {
 }
 
 #difference > .span2:nth-child(1) {
-    background-color: #E3DEC1;
+    background-color: #209b52;
 }
 
 #difference > .span2:nth-child(2) {
-    background-color: #558C89;
+    background-color: #0c7749;
 }
 
 #difference > .span2:nth-child(3) {
-    background-color: #E89F65;
+    background-color: #209b52;
 }
 
 #difference > .span2:nth-child(4) {
-    background-color: #47AFAF;
+    background-color: #0c7749;
 }
 
 #difference > .span2:nth-child(5) {
-    background-color: #D9853B;
+    background-color: #209b52;
 }
 
 #difference > .span2 > div{
