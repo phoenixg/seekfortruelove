@@ -39,6 +39,7 @@ Route::post('dashboard/imagehandle',     array('as' => 'dashboard_imagehandle', 
 Route::post('dashboard/imagecrop',       array('as' => 'dashboard_imagecrop',         'uses' => 'dashboard@imagecrop'));
 Route::delete('dashboard/imagedelete',   array('as' => 'dashboard_imagedelete',       'uses' => 'dashboard@imagedelete'));
 Route::get('dashboard/message',          array('as' => 'dashboard_message',           'uses' => 'dashboard@message'));
+Route::get('dashboard/miscellaneous',    array('as' => 'dashboard_miscellaneous',     'uses' => 'dashboard@miscellaneous'));
 Route::post('dashboard/messagegalleryauthhandle', array('as' => 'dashboard_messagegalleryauthhandle', 'uses' => 'dashboard@messagegalleryauthhandle'));
 
 

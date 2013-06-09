@@ -10,6 +10,7 @@ h3 .diff_title {
 #difference > .span2{
     border: 1px dashed #e5e5e5;
     color: #555555;
+    text-align: center;
 }
 
 #difference > .span2:nth-child(1) {

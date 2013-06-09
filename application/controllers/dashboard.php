@@ -62,6 +62,13 @@ class Dashboard_Controller extends Base_Controller {
 			->with('menuflg_personalad', true);
 	}
 
+	public function get_miscellaneous() {
+		return View::make('dashboard.miscellaneous')
+			->with('user_notice', $this->user_notice)
+			->with('verified', Auth::user()->verified)
+			->with('menuflg_miscellaneous', true);
+	}
+
 	public function get_message() {
 		$user_infoauth_result = DB::table('users_infoauth')
 					->where('user_id', '=', Auth::user()->id)

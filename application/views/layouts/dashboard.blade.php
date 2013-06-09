@@ -74,6 +74,9 @@
                             <li class="@if(isset($menuflg_message))active@endif">
                                 <a href="{{ URL::to_route('dashboard_message') }}"><i class="icon-envelope"></i>&nbsp;消息中心</a>
                             </li>
+                            <li class="@if(isset($menuflg_miscellaneous))active@endif">
+                                <a href="{{ URL::to_route('dashboard_miscellaneous') }}"><i class="icon-cog"></i>&nbsp;杂项</a>
+                            </li>
                             <?php /*
                             <li class="nav-header">高级功能</li>
                             <li><a href="#"><i class="icon-pencil"></i> 项目</a></li>
