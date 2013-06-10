@@ -73,8 +73,13 @@
 			</div>
 		</div>
 
-		<br />
-		<br />
+		<div class="row" id="map">
+			<div class="span12">
+				<h5>TRUELOVE ON MAP</h5>
+				<div id="sousoumap">地图请耐心等待几周时间...</div>
+			</div>
+		</div>
+
 		<!--
 		<div class="row">
 			<div class="span12" style="text-align: center;">

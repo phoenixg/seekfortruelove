@@ -7,7 +7,7 @@
     color:red;
     height: 200px;
     width: 200px;
-    background-color:#ff5949;
+    background-color: #ff5949;
 }
 
 .hero-unit #heroInfoBoxStats {
@@ -102,3 +102,26 @@
     text-decoration: underline;
     font-weight: bold;
 }
+
+#map h5{
+    text-align: center;
+    padding-top: 20px;
+    color: #ff5949;
+    text-shadow: 0px 1px 1px #e5e5e5;
+    font: 50px 'LeagueGothicRegular';
+}
+
+#map #sousoumap {
+    width: 100%;
+    height: 350px;
+    background-color: #ff5949;
+    color: #ffffff;
+    text-shadow: 0px 1px 1px #e5e5e5;
+    font: 60px 'LeagueGothicRegular';
+
+    /* 这三行用于将文字在div中居中 */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 350px;       /* 同div的高度一样 */
+}
+
