@@ -76,7 +76,7 @@
 		<div class="row" id="map">
 			<div class="span12">
 				<h5>TRUELOVE ON MAP</h5>
-				<div id="sousoumap">地图请耐心等待几周时间...</div>
+				<div id="sousoumap">离地图上线还剩几周时间...</div>
 			</div>
 		</div>
 
