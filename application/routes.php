@@ -1,7 +1,10 @@
 <?php
 Route::get('/', array('as' => 'home', function()
 {
-	return View::make('home.index');
+    $count = DB::table('users')->where('verified', '=', 2)->count();
+
+	return View::make('home.index')
+        ->with('count', $count);
 
 }));
 

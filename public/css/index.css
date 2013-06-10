@@ -3,6 +3,39 @@
     text-align: center;
 }
 
+.hero-unit .heroInfoBox {
+    color:red;
+    height: 200px;
+    width: 200px;
+    background-color:#ff5949;
+}
+
+.hero-unit #heroInfoBoxStats {
+    width: 500px;
+    color: #ffffff;
+}
+
+.hero-unit #heroInfoBoxStats h4 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.hero-unit #heroInfoBoxStats span {
+    font-size: 72px;
+}
+
+/*
+.hero-unit #heroInfoBoxShots {
+    width: 260px;
+}
+
+.hero-unit #heroInfoBoxShots img{
+    width: 260px;
+}
+*/
+
 #difference h3 {
     color:#dddddd;
 }

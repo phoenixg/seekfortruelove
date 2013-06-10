@@ -26,10 +26,14 @@
 				@endif
 				</p>
 				</div>
-				<!--
-				<div class="span3 offset1" style="background-color:red;height:200px;width:200px;">
+			
+				<div class="heroInfoBox span3 offset1" id="heroInfoBoxStats">
+					<h4>当前用户数</h4>
+					<span>{{ $count }}</span>
 				</div>
-				<div class="span3" style="background-color:green;height:200px;width:200px;">
+				<!--
+				<div class="heroInfoBox span3" id="heroInfoBoxShots">
+					<img src="{{ URL::base() . '/images/sitepromote/' . '201306-10seekfortruelove-site-promote.jpg' }}" />
 				</div>
 				-->
 			</div>
