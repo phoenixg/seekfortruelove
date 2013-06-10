@@ -211,7 +211,7 @@ return array(
 
 	'mail_smtp_addr'    => 'smtp.gmail.com',
 	'mail_smtp_port'    => 465,
-	'mail_account' => 'gopher.huang@gmail.com',
+	'mail_account' => 'heresyseeker@gmail.com',
 	'mail_password' => '',
 
 

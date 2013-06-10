@@ -81,11 +81,16 @@ div.navbar-fixed-top{position: relative;}
     color:#E5E5E5;
     border-top: 1px solid #E5E5E5;
     margin-top: 30px;
-    padding: 30px 0 0 0;
+    padding: 15px 0 15px 0;
     text-align: center;
     width:100%;
     position:relative;
     left: 0;
     bottom: 0;
     display: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #E5E5E5;
 }
