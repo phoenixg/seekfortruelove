@@ -26,6 +26,11 @@
     font-size: 72px;
 }
 
+.hero-unit #heroInfoBoxStats small {
+    font-size: 10px;
+    display: block;
+}
+
 /*
 .hero-unit #heroInfoBoxShots {
     width: 260px;

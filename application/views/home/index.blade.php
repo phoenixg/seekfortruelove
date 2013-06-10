@@ -30,6 +30,7 @@
 				<div class="heroInfoBox span3 offset1" id="heroInfoBoxStats">
 					<h4>当前用户数</h4>
 					<span>{{ $count }}</span>
+					<small>（只包括已验证的用户）</small>
 				</div>
 				<!--
 				<div class="heroInfoBox span3" id="heroInfoBoxShots">
