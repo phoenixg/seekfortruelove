@@ -3,14 +3,31 @@
     text-align: center;
 }
 
-h3 .diff_title {
-    font-family: 'Leckerli One', cursive;
+#difference h3 {
+    color:#dddddd;
 }
 
-#difference > .span2{
+#difference h3 .diff_title {
+    font-family: 'Leckerli One', cursive;
+    color:#eeeeee;
+}
+
+#difference > .span2 {
     border: 1px dashed #e5e5e5;
     color: #555555;
     text-align: center;
+}
+
+#difference a:link, #difference a:visited{
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#difference a:active, #difference a:hover{
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 12px;
 }
 
 #difference > .span2:nth-child(1) {

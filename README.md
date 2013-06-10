@@ -1,8 +1,8 @@
-TRUELOVE
-========
+SEEKFORTRUELOVE
+===============
 
 - **项目名称：** SEEKFORTRUELOVE
-- **正式域名：** seekfortruelove.org
+- **正式域名：** http://www.seekfortruelove.org
 - **技术架构：**
     - 开发框架：laravel 3
     - bundles ：

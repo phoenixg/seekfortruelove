@@ -39,26 +39,31 @@
 			<div class="span2 offset1">
 				<div>
 					<h3><span class="diff_title">1</span> 非营利原则</h3>
+					<a href="{{ URL::base() }}/faq#anchor-principle-earn" class="pull-right" target="_blank">了解更多</a>
 				</div>
 			</div>
 			<div class="span2">
 				<div>
 					<h3><span class="diff_title">2</span> 无广告原则</h3>
+					<a href="{{ URL::base() }}/faq#anchor-principle-ads" class="pull-right" target="_blank">了解更多</a>
 				</div>
 			</div>
 			<div class="span2">
 				<div>
 					<h3><span class="diff_title">3</span> 无差异原则</h3>
+					<a href="{{ URL::base() }}/faq#anchor-principle-diff" class="pull-right" target="_blank">了解更多</a>
 				</div>
 			</div>
 			<div class="span2">
 				<div>
 					<h3><span class="diff_title">4</span> 更强调文字</h3>
+					<a href="{{ URL::base() }}/faq#anchor-principle-text" class="pull-right" target="_blank">了解更多</a>
 				</div>
 			</div>
 			<div class="span2">
 				<div>
 					<h3><span class="diff_title">5</span> 真实性原则</h3>
+					<a href="{{ URL::base() }}/faq#anchor-principle-true" class="pull-right" target="_blank">了解更多</a>
 				</div>
 			</div>
 		</div>
