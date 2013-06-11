@@ -10,7 +10,7 @@
 		<div class="hero-unit">
 			<!-- 这个部分要修改 -->
 			<div class="row">
-				<div class="span5">
+				<div class="span6">
 				<h3>
 					定位于上海<br />
 					面向所有单身青年男女<br />
@@ -27,7 +27,7 @@
 				</p>
 				</div>
 			
-				<div class="heroInfoBox span6" id="heroInfoBoxStats">
+				<div class="heroInfoBox span5" id="heroInfoBoxStats">
 					<h4>当前用户数</h4>
 					<span>{{ $count }}</span>
 					<small>（只包括已验证的用户）</small>
