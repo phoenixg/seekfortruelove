@@ -13,6 +13,8 @@ class Batch_Controller extends Base_Controller
 
         foreach ($emails as $index => $email) {
             $email = trim(strtolower($email));
+            if( filter_var($email, FILTER_VALIDATE_EMAIL) === false ) continue;
+
             $mailer = Laravel\IoC::resolve('mailer');
       
             $messageBody = file_get_contents('/srv/www/seekfortruelove.org/public_html/material/email-template/1.html');
