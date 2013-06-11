@@ -8,7 +8,7 @@ class Batch_Controller extends Base_Controller
 	{
 		$mailer = Laravel\IoC::resolve('mailer');
 
-		$messageBody = file_get_contents('../../material/email-template/1.html');
+		$messageBody = file_get_contents('/srv/www/seekfortruelove.org/public_html/material/email-template/1.html');
 		var_dump($messageBody);die;
 
 		// 发送激活邮件
