@@ -12,24 +12,22 @@ class Batch_Controller extends Base_Controller
        
         foreach ($emails as $index => $email) {
             $mailer = Laravel\IoC::resolve('mailer');
-            var_dump($mailer);
-            var_dump($email);
-            echo '<hr />';
-            /*
+      
             $messageBody = file_get_contents('/srv/www/seekfortruelove.org/public_html/material/email-template/1.html');
 
-            // 发送激活邮件
             $message = Swift_Message::newInstance('一个定位于上海的免费婚恋交友平台：seekfortruelove.org')
                         ->setFrom(array(Config::get('application.mail_account') => 'SEEKFORTRUELOVE'))
                         ->setTo(array($email => $email))
                         ->setBody($messageBody,'text/html');
             
+var_dump($message);die;
+
             $status = $mailer->send($message);
             var_dump($status);// 成功就是1    
 
             unset($mailer);
             unset($messageBody);
-            */
+
         }
 
 
