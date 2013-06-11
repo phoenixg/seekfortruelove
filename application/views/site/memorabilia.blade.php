@@ -92,5 +92,25 @@
             <dt id="mytime7"><a class="open">因程序代码无意中开源了livicons遭到作者的DMCA指控，github源码托管被冻结而导致项目开发中断</a></dt>
         </dl>
     </div>
+
+    <div class="timelineMajor">
+        <h2 class="timelineMajorMarker"><span>2013年06月11日</span></h2>
+        <dl class="timelineMinor">
+            <dt id="mytime8"><a class="open">截图</a></dt>
+            <dd style="display: block;" id="mytime8EX" class="timelineEvent">
+            <p>网站重新上线，正式投入使用！</p>
+            <br /><br />
+            <table>
+                <tr>
+                    <td><img src="{{ URL::base() . '/images/memorabilia/' . 'screenshot20130611.png' }}" alt="" width="250px"></td>
+                </tr>
+            </table>
+            <br class="clear">
+            </dd>
+        </dl>
+    </div>
+
+
+
 </div><!-- /#timelineContainer -->
 @endsection

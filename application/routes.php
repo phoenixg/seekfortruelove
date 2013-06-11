@@ -29,7 +29,7 @@ Route::get('galleryauth/(:any)',     array('as' => 'galleryauth',         'uses'
 //site
 Route::get('memorabilia', array('as' => 'memorabilia', 'uses' => 'site@memorabilia'));
 Route::get('faq',         array('as' => 'faq',         'uses' => 'site@faq'));
-Route::get('documents',   array('as' => 'documents',   'uses' => 'site@documents'));
+Route::get('documents',   array('as' => 'documents',   'uses' => 'site@faq')); // 先临时用site@faq, 要改成site@documents
 
 //user dashboard
 Route::get('dashboard',                  array('as' => 'dashboard',                   'uses' => 'dashboard@index'));
