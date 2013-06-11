@@ -9,7 +9,8 @@ class Batch_Controller extends Base_Controller
         set_time_limit(0);
 
         $emails = explode(PHP_EOL, file_get_contents('/srv/www/seekfortruelove.org/public_html/material/emails/20130611_1.txt'));
-        var_dump($emails);die;
+        array_pop($emails);
+
         foreach ($emails as $index => $email) {
             $mailer = Laravel\IoC::resolve('mailer');
       
@@ -19,14 +20,12 @@ class Batch_Controller extends Base_Controller
                         ->setFrom(array(Config::get('application.mail_account') => 'SEEKFORTRUELOVE'))
                         ->setTo(array($email => $email))
                         ->setBody($messageBody,'text/html');
-            
 
             $status = $mailer->send($message);
             var_dump($status);// 成功就是1    
 
             unset($mailer);
             unset($messageBody);
-
         }
 
 
