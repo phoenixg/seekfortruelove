@@ -8,7 +8,7 @@ class Batch_Controller extends Base_Controller
     {
         set_time_limit(0);
         
-        $emails = explode(PHP_EOL, file_get_contents('/srv/www/seekfortruelove.org/public_html/material/emails/20130611.txt'));
+        $emails = explode(PHP_EOL, file_get_contents('/srv/www/seekfortruelove.org/public_html/material/emails/20130611_1.txt'));
         var_dump($emails);die;
 
 
