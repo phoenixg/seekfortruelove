@@ -80,5 +80,9 @@
 
 
     @yield('page_scripts_footer')
+    <!-- CNZZ STATS -->
+    <div style="display:none;visibility:hidden;">
+        <script src="http://s13.cnzz.com/stat.php?id=4858222&web_id=4858222" language="JavaScript"></script>
+    </div>
 </body>
 </html>
