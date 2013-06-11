@@ -9,7 +9,7 @@ class Batch_Controller extends Base_Controller
         set_time_limit(0);
 
         $emails = explode(PHP_EOL, file_get_contents('/srv/www/seekfortruelove.org/public_html/material/emails/20130611_1.txt'));
-       
+        $emails = array('2814258914@qq.com', 'gopher.huang@gmail.com');
         foreach ($emails as $index => $email) {
             $mailer = Laravel\IoC::resolve('mailer');
       
