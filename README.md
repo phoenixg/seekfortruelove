@@ -42,6 +42,10 @@ SEEKFORTRUELOVE
     php artisan migrate:install
     php artisan migrate
 
+    # 权限
+    chmod -R 777 storage/
+    chmod -R 777 public/images/
+
 ##### 用户权限说明 #####
       verified :
             公开权限表
