@@ -12,6 +12,7 @@ class Batch_Controller extends Base_Controller
         array_pop($emails);
 
         foreach ($emails as $index => $email) {
+            $email = trim(strtolower($email));
             $mailer = Laravel\IoC::resolve('mailer');
       
             $messageBody = file_get_contents('/srv/www/seekfortruelove.org/public_html/material/email-template/1.html');
