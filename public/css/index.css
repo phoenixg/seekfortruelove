@@ -6,12 +6,10 @@
 .hero-unit .heroInfoBox {
     color:red;
     height: 200px;
-    width: 200px;
     background-color: #ff5949;
 }
 
 .hero-unit #heroInfoBoxStats {
-    width: 470px;
     color: #ffffff;
 }
 
