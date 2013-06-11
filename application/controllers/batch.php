@@ -10,8 +10,12 @@ class Batch_Controller extends Base_Controller
 
         $emails = explode(PHP_EOL, file_get_contents('/srv/www/seekfortruelove.org/public_html/material/emails/20130611_1.txt'));
        
-        //foreach ($emails as $index => $email) {
+        foreach ($emails as $index => $email) {
             $mailer = Laravel\IoC::resolve('mailer');
+            var_dump($mailer);
+            var_dump($email);
+            echo '<hr />';
+            /*
             $messageBody = file_get_contents('/srv/www/seekfortruelove.org/public_html/material/email-template/1.html');
 
             // 发送激活邮件
@@ -25,7 +29,8 @@ class Batch_Controller extends Base_Controller
 
             unset($mailer);
             unset($messageBody);
-        //}
+            */
+        }
 
 
         
