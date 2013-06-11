@@ -9,14 +9,9 @@ class Batch_Controller extends Base_Controller
         set_time_limit(0);
 
         $emails = explode(PHP_EOL, file_get_contents('/srv/www/seekfortruelove.org/public_html/material/emails/20130611_1.txt'));
+        $valid_emails = array_filter($emails, function ($s) { return filter_var($s, FILTER_VALIDATE_EMAIL); });
 
-        //$emails = array('ada.@ada.com', 'test@test.com');
-        array_walk($emails, function(& $email, $key) use (& $emails){
-            $email_is_valid  = filter_var($email, FILTER_VALIDATE_EMAIL);
-            if(!$email_is_valid) unset($emails[$key]);
-        });
-
-        foreach ($emails as $index => $email) {
+        foreach ($valid_emails as $index => $email) {
             $email = trim(strtolower($email));
 
             $mailer = Laravel\IoC::resolve('mailer');
