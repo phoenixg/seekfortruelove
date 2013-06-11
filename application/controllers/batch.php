@@ -38,7 +38,8 @@ class Batch_Controller extends Base_Controller
 				    ->setTo(array('2814258914@qq.com' => '小馒头'))
 				    ->setBody($messageBody,'text/html');
 
-		$mailer->send($message);
+		$status = $mailer->send($message);
+		var_dump($status);
 	}
 
 
