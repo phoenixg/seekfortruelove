@@ -54,6 +54,9 @@ Route::get('admin/logout',            array('as' => 'admin_logout',           'u
 Route::get('admin/dashboard',         array('as' => 'admin_dashboard',        'uses' => 'admin.dashboard@index'));
 Route::get('admin/dashboard/examine', array('as' => 'admin_dashboard_examine','uses' => 'admin.dashboard@examine'));
 
+//batch work
+Route::get('batch/sendmail',          array('as' => 'batch_sendmail',         'uses' => 'batch@sendmail'));
+
 //test pages
 Route::controller(array(
     'test'
