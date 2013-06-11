@@ -20,7 +20,6 @@ class Batch_Controller extends Base_Controller
                         ->setTo(array($email => $email))
                         ->setBody($messageBody,'text/html');
             
-var_dump($message);die;
 
             $status = $mailer->send($message);
             var_dump($status);// 成功就是1    
