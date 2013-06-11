@@ -42,7 +42,7 @@
         <dl class="timelineMinor">
             <dt id="mytime3"><a class="open">被迫改变定位</a></dt>
             <dd style="display: block;" id="mytime3EX" class="timelineEvent">
-            <p>在yimaneili和赞美社先后遭到删贴，不得不改成非主内定位。</p>
+            <p>在yimaneili和赞美社先后遭到删贴，不得不改成非主内定位。这是当时网站的样子，非常得简陋：</p>
             <br /><br />
             <table>
                 <tr>

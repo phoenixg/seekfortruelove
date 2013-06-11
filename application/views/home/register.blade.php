@@ -258,7 +258,7 @@
 						<div class="controls">
 							<label class="checkbox">
 							<input type="checkbox" value="1" name="terms">
-							勾选此项表示接受{{ HTML::link_to_route('home', '使用条款') }}和{{ HTML::link_to_route('home', '隐私声明') }}
+							勾选此项表示接受{{ HTML::link_to_route('faq', '使用条款') }}和{{ HTML::link_to_route('faq', '隐私声明') }}
 							</label>
 						</div>
 					</div>
@@ -284,8 +284,8 @@
 			
 		</div>
 		<div class="span4">
-			<!--information box-->
-			aaa
+			<!--information box 使用条款啊什么的-->
+			
 		</div>
 	</div>
 </div>
