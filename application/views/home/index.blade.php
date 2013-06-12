@@ -10,7 +10,7 @@
 		<div class="hero-unit">
 			<!-- 这个部分要修改 -->
 			<div class="row">
-				<div class="span6">
+				<div class="span12"><!-- 原来是span6 -->
 				<h3>
 					定位于上海<br />
 					面向所有单身青年男女<br />
@@ -26,12 +26,13 @@
 				@endif
 				</p>
 				</div>
-			
+				<!--
 				<div class="heroInfoBox span5" id="heroInfoBoxStats">
 					<h4>当前用户数</h4>
 					<span>{{ $count }}</span>
 					<small>（只包括已验证的用户）</small>
 				</div>
+				-->
 				<!--
 				<div class="heroInfoBox span3" id="heroInfoBoxShots">
 					<img src="{{ URL::base() . '/images/sitepromote/' . '201306-10seekfortruelove-site-promote.jpg' }}" />
