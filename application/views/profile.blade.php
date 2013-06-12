@@ -40,7 +40,7 @@
             </div>
             <div class="row">
                 <div class="span2"><strong>身高/体重:&nbsp;</strong>{{ $user->height }}/{{ $user->weight }}</div>
-                <div class="span2"><strong>出生年份/年龄:&nbsp;</strong>{{ $user->born }}/25</div>
+                <div class="span2"><strong>出生年份<!--/年龄-->:&nbsp;</strong>{{ $user->born }}<!--/25--></div>
                 <div class="span2"><strong>婚姻状况:&nbsp;</strong>{{ $user->marriage }}</div>
                 <div class="span2"><strong>常住区域:&nbsp;</strong>{{ $user->district }}</div>
                 <div class="span2"><strong>住房情况:&nbsp;</strong>{{ $user->living }}</div>
