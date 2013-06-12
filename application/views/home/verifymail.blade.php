@@ -34,7 +34,7 @@
 	<div class="hero-unit">
 		<h2>祝贺！</h2>
 		<p>您的账号激活成功！您现在可以登录并搜索其他用户。请等待管理员审核您的资料，只有经审核的用户才能被看到和搜索到。这通常需要1-2天时间。</p>
-		<p>{{ HTML::link_to_route('login', '登陆', null, array('class'=>'btn btn-primary')) }}</p>
+		<p>{{ HTML::link_to_route('login', '登录', null, array('class'=>'btn btn-primary')) }}</p>
 	</div>
 	@endif
 
