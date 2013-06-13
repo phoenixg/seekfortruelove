@@ -19,6 +19,11 @@ class Site_Controller extends Base_Controller
 		return View::make('site.faq');
 	}
 
+	public function get_roadmap()
+	{
+		return View::make('site.roadmap');
+	}
+
 	public function get_documents()
 	{
 		return View::make('site.documents');
