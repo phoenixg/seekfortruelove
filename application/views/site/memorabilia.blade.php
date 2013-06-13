@@ -30,12 +30,14 @@
         </dl>
     </div>
 
+    <!--
     <div class="timelineMajor">
         <h2 class="timelineMajorMarker"><span>2012年12月22日</span></h2>
         <dl class="timelineMinor">
             <dt id="mytime2"><a class="open">第1位注册用户诞生</a></dt>
         </dl>
     </div>
+    -->
 
     <div class="timelineMajor">
         <h2 class="timelineMajorMarker"><span>2012年12月26日</span></h2>
@@ -110,7 +112,12 @@
         </dl>
     </div>
 
-
+    <div class="timelineMajor">
+        <h2 class="timelineMajorMarker"><span>2013年06月12日</span></h2>
+        <dl class="timelineMinor">
+            <dt id="mytime9"><a class="open">第1位正式用户诞生</a></dt>
+        </dl>
+    </div>
 
 </div><!-- /#timelineContainer -->
 @endsection
