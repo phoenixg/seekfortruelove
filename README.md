@@ -128,6 +128,12 @@ SEEKFORTRUELOVE
 - 第一批：http://www.jidunet.cn/mail/qz0595.txt 加上最开头几个特别的地址 （20130611_1.txt等，weiyun）
 
 
+#### 审核未通过原因
+    <h3>审核未通过原因</h3>
+    <ul>
+    <li>尚未上传照片</li>
+    <li>尚未设置头像</li>
+    </ul>
 
-
+    <p>请完善后等候人工审核，只有经过审核的用户才能被其他用户查看到^^，如有疑问请电邮至：heresyseeker@gmail.com</p>
 
