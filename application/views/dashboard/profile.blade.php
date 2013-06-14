@@ -7,6 +7,14 @@
 @section('main')
 	<h2>个人资料编辑</h2>
 	<hr />
+
+	@if( !File::exists( path('image_profile_icon').Auth::user()->id.'.jpg') )
+	    <div class="alert">
+	    <button type="button" class="close" data-dismiss="alert">&times;</button>
+	    <strong>提示：</strong> 只有上传了照片并设置头像的用户才能通过审核，否则无法搜索和被搜索到。
+	    </div>
+	@endif
+
 	<span class="preview">
 		[&nbsp;{{ HTML::link_to_route('profile', '预览个人主页', array(Auth::user()->id)) }}&nbsp;]
 	</span>
