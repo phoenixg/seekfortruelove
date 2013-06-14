@@ -15,7 +15,16 @@
 <hr />
 
 <div id="help">
-    <h4><a name="anchor-imageuploadfail">为什么上传照片失败？</a></h4>
+    <h4><a name="anchor-registerproblem">为什么无法注册？</a></h4>
+    <p>请确保以下信息正确：</p>
+    <ul>
+        <li>填写了电子邮件、密码、昵称、身高、体重、学校等信息</li>
+        <li>两次输入的密码必须一致</li>
+        <li>勾选了使用条款和隐私政策的声明复选框</li>
+        <li>如果填写了博客地址，请确保地址是有效的URL链接</li>
+    </ul>
+
+    <h4><a name="anchor-imageuploadfail">为什么无法上传照片？</a></h4>
     <p>请确保上传的照片格式是JPG, PNG或GIF格式，大小在100K以内。</p>
 
     <h4><a name="anchor-howresizeimage">照片大于100K，怎样压缩？</a></h4>

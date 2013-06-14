@@ -1,4 +1,7 @@
 @layout('layouts.default')
+@section('page_styles_header')
+	{{ HTML::style('css/register.css') }}
+@endsection
 @section('page_scripts_header')
 	{{ HTML::script('js/register.js') }}
 @endsection
@@ -34,7 +37,7 @@
 					<legend></legend>
 					<h3>登录信息</h3>
 					<hr />
-					
+
 					<div class="control-group">
 						{{ Form::label('email', '电子邮件', array('class' => 'control-label')) }}
 						<div class="controls">
@@ -258,7 +261,7 @@
 						<div class="controls">
 							<label class="checkbox">
 							<input type="checkbox" value="1" name="terms">
-							勾选此项表示接受{{ HTML::link_to_route('faq', '使用条款') }}和{{ HTML::link_to_route('faq', '隐私声明') }}
+							我同意{{ HTML::link_to_route('faq', '使用条款') }}和{{ HTML::link_to_route('faq', '隐私声明') }}
 							</label>
 						</div>
 					</div>
@@ -268,7 +271,7 @@
 							{{ Form::submit('提交', array('class' => 'btn btn-primary')) }}
 						</div>
 					</div>
-				
+
 				</fieldset>
 
 				{{ Form::token() }}
@@ -281,11 +284,12 @@
 
 
 
-			
+
 		</div>
 		<div class="span4">
 			<!--information box 使用条款啊什么的-->
-			
+			<a id="registerproblem" class="btn btn-mini pull-right"
+				href="{{ URL::base() . '/help#anchor-registerproblem' }}" target="_blank">注册时遇到问题？</a>
 		</div>
 	</div>
 </div>
