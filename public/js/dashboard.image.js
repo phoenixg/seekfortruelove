@@ -2,7 +2,10 @@
 $(document).ready(function(){
 	$('#uploadproblem').click(function(){
 		// 跳转到帮助页面
-		// http://seekfortruelove
+		window.open(
+		  BASE+'/help#anchor-imageuploadfail',
+		  '_blank'
+		);
 	});
 });
 
