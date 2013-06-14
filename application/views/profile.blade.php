@@ -85,7 +85,7 @@
             <strong>最近被谁关注了：</strong>
             @forelse ($watchers as $watcher)
                 <a href="{{ URL::base() . '/profile/'. $watcher->watcher_user_id }}" class="" title="" target="_blank">
-                    <img src="{{ URL::base() . '/images/profile/icon/'.$watcher->watcher_user_id }}" alt="" />
+                    <img src="{{ URL::base() . '/images/profile/icon/'.$watcher->watcher_user_id .'.jpg' }}" alt="" />
                 </a>
             @empty
                 <span>暂时没有人来看过，别着急，等会儿吧^^</span>

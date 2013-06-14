@@ -46,6 +46,10 @@ SEEKFORTRUELOVE
     chmod -R 777 storage/
     chmod -R 777 public/images/
 
+    # 其他
+    把`users_pw`的user_id字段设置为主键
+    
+
 ##### 用户权限说明 #####
       verified :
             公开权限表
