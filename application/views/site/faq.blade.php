@@ -104,7 +104,7 @@
 	<p>站长不得已采用人工这种方式来审核，以更大可能确保内容的质量和真实性，人工审核有过分主观的弊端，因此，
 	站长将一方面依据网站的使用条款和规则来进行审核，一方面将逐步改进网站，将审核过程“去人工化”。</p>
 
-	<h4><a href="anchor-howbookmark">如何收藏本站？</a></h4>
+	<h4><a name="anchor-howbookmark">如何收藏本站？</a></h4>
 	<p><a id="bookmarkme" href="javascript:void(0);" 
 		class="btn btn-mini" rel="sidebar" title="收藏本站">点此收藏</a></p>
 
