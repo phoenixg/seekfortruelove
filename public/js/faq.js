@@ -1,10 +1,11 @@
 $(document).ready(function() {
     $(function() {
+
         $('#bookmarkme').click(function() {
             if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
                 window.sidebar.addPanel(document.title,window.location.href,'');
             } else if(window.external && window.external.AddFavorite) { // IE Favorite
-                window.external.AddFavorite(location.href,document.title); 
+                window.external.AddFavorite(location.href,document.title);
             } else if(window.opera && window.print) { // Opera Hotlist
                 this.title=document.title;
                 return true;
@@ -12,5 +13,6 @@ $(document).ready(function() {
                 alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
             }
         });
+
     });
 });
