@@ -1,3 +1,11 @@
+//uploader problem
+$(document).ready(function(){
+	$('#uploadproblem').click(function(){
+		// 跳转到帮助页面
+		// http://seekfortruelove
+	});
+});
+
 //valums file uploader
 $(document).ready(function(){
 	function createUploader(){
@@ -35,10 +43,10 @@ $(document).ready(function(){
 				}
 
 				console.log('upload done');
-				
+
 				//convert the uploaded image, then save it and add a record into db
 				handleAfterUpload(responseJSON.uploadFileName);
-				
+
 				$('.qq-upload-success').click(function(){
 					$(this).fadeOut();
 				});
@@ -59,7 +67,7 @@ $(document).ready(function(){
 			dataType:"json",
 			success: function(jsonData){
 				//console.log(jsonData);
-				
+
 				if (jsonData.success == true) {
 					console.log('handleAfterUpload done');
 
@@ -72,8 +80,8 @@ $(document).ready(function(){
 					$('#modal h3').text('上传成功！');
 					$('#modal').on('hidden', function(){
 						location.reload();
-					});				
-				};	
+					});
+				};
 			},
 			error:function(re) {
 				//console.log(re);
@@ -87,7 +95,7 @@ $(document).ready(function(){
 		title : '注意！只允许jpeg, jpg, png, gif 格式，大小在100KB以内的图片。最多能上传5张'
 	});
 
-}); 
+});
 
 //fancybox
 $(document).ready(function() {
@@ -116,12 +124,12 @@ $(document).ready(function() {
 
 //Delete choosen image
 $(document).ready(function(){
-	
+
 	$('#delete').click(function(e){
 		e.preventDefault();
 
 		var imgtodelete = $('#imgtocrop').val();
-		
+
 		$.ajax({
 			url: BASE + "/dashboard/imagedelete",
 			data: {
@@ -132,7 +140,7 @@ $(document).ready(function(){
 			success: function(jsonData){
 				if (jsonData.success == true) {
 					console.log('Image delete done');
-					
+
 					$('#modal').modal({
 						backdrop:true,
 						keyboard:true,
@@ -206,7 +214,7 @@ $(document).ready(function(){
 	var i = 1;
 	$('#change').click(function(e){
 		e.preventDefault();
-		
+
 		if (arrJPEG[i] == undefined) {
 			jcrop_api.setImage(arrJPEG[0]);
 			$('#imgtocrop').val(arrJPEG[0]);
