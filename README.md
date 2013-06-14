@@ -135,6 +135,8 @@ SEEKFORTRUELOVE
 - http://www.seekfortruelove.org/profile/29 没有该用户的bug
 - 个人资料编辑页面提示必须上传照片，对有无照片进行判断
 - 注册时的验证码
+- 封禁账户的处理
+- 冻结账户的处理
 
 #### 审核未通过原因
     <h3>审核未通过原因</h3>
