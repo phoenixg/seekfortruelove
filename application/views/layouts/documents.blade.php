@@ -62,19 +62,17 @@
                                     <span class="livicon" data-n="question" data-s="16" data-c="original" data-hc="#000" data-a="1" data-l="0" data-i="3" data-d="0" data-et="hover" data-op="0"></span>&nbsp;常见问题</a>
                             </li>
                             <li class="">
+                                <a href="{{ URL::to_route('help') }}">
+                                    <span class="livicon" data-n="help" data-s="16" data-c="original" data-hc="#000" data-a="1" data-l="0" data-i="3" data-d="0" data-et="hover" data-op="0">&nbsp;使用帮助</a>
+                            </li>
+                            <li class="">
                                 <a href="{{ URL::to_route('memorabilia') }}">
                                     <span class="livicon" data-n="calendar" data-s="16" data-c="original" data-hc="#000" data-a="1" data-l="0" data-i="3" data-d="0" data-et="hover" data-op="0"></span>&nbsp;大事记</a>
                             </li>
-                            <!-- TODO：找个合适的livicon搭配路线图
-                            <li class="">
-                                <a href="{{ URL::to_route('roadmap') }}">
-                                    <span class="livicon" data-n="calendar" data-s="16" data-c="original" data-hc="#000" data-a="1" data-l="0" data-i="3" data-d="0" data-et="hover" data-op="0"></span>&nbsp;路线图</a>
-                            </li>
-                            -->
                             <!--
                             <li class="">
-                                <a href="{{ URL::to_route('faq') }}">
-                                    <span class="livicon" data-n="help" data-s="16" data-c="original" data-hc="#000" data-a="1" data-l="0" data-i="3" data-d="0" data-et="hover" data-op="0">&nbsp;使用帮助</a>
+                                <a href="{{ URL::to_route('roadmap') }}">
+                                    <span class="livicon" data-n="tasks" data-s="16" data-c="original" data-hc="#000" data-a="1" data-l="0" data-i="3" data-d="0" data-et="hover" data-op="0"></span>&nbsp;路线图</a>
                             </li>
                             -->
                         </ul>
