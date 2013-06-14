@@ -66,7 +66,7 @@
 		如果你有兴趣的话，请写信到rms@stallman.org，让我们看看会有什么结果。
 		</p>
 		<p class="blockquoteAuthor">
-		By Richard Stallman
+		by Richard Stallman
 		</p>
 	</blockquote>
 @endsection
