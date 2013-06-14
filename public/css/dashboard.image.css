@@ -1,6 +1,11 @@
 /* 上传区域 */
 #image-uploader{
 	margin-bottom: 60px;
+	clear:both;
+}
+
+button#uploadproblem {
+	margin-bottom: 4px;
 }
 
 /* 相册里的照片 */

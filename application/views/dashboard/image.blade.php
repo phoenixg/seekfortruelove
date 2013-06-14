@@ -17,6 +17,7 @@
 @section('main')
 	<h2>相册</h2>
 	<hr />
+	<button class="btn btn-mini pull-right" id="uploadproblem">上传时遇到问题？</button>
 
 	<div id="modal" class="modal hide fade in">
 		<div class="modal-header">
@@ -27,13 +28,12 @@
 			<a data-dismiss="modal" class="btn" href="#">确定并刷新</a>
 		</div>
 	</div>
-	
-	<div id="image-uploader" rel="tooltip" class="@if($images_num >= 5)hide@endif">		
-		<noscript>			
+
+	<div id="image-uploader" rel="tooltip" class="@if($images_num >= 5)hide@endif">
+		<noscript>
 			<p>Please enable JavaScript to use file uploader.</p>
 		</noscript>
 	</div>
-	
 
 	<div id="image-group">
 		@forelse ($images as $image)
@@ -47,7 +47,7 @@
 
 	@if($images_num > 0)
 		<hr style="clear:both;padding-top:40px;" />
-		
+
 		<div id="image-icon">
 			<div id="image-icon-nav">
 				@if($images_num > 1)<a href="" id="change" class="btn btn-primary">下一张图</a>@endif
