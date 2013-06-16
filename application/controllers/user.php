@@ -163,8 +163,21 @@ class User_Controller extends Base_Controller
     }
 
     public function get_profile($id) {
+        // 判断用户是否存在，不存在就返回404页面
         if( User::find($id) === null ) {
             return Response::error('404');
+        }
+
+        // 判断自己是否通过了帐号验证
+        if ((int)Auth::user()->id != (int)$id) {
+            $iamverified = DB::table('users')
+                ->where('id', '=', Auth::user()->id)
+                ->where('verified', '=', 2)
+                ->first();
+            $iamverified = empty($iamverified)? false:true;
+            if (!$iamverified) {
+                return View::make('site.pageneedverified');
+            }
         }
 
         // 如果看的人不是自己，就往关注表里插入一条查看过TA的历史信息

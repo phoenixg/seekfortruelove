@@ -44,8 +44,8 @@
         <dl class="timelineMinor">
             <dt id="mytime3"><a class="open">被迫改变定位</a></dt>
             <dd style="display: block;" id="mytime3EX" class="timelineEvent">
-            <p>在yimaneili和赞美社先后遭到删贴，不得不改成非主内定位。这是当时网站的样子，非常得简陋：</p>
-            <br /><br />
+            <p>在yimaneili和赞美社先后遭到删贴，不得不改成非主内定位。这是当时网站的样子，非常的简陋：</p>
+            <br /><br /><br />
             <table>
                 <tr>
                     <td><img src="{{ URL::base() . '/images/memorabilia/' . 'screenshot20121229.png' }}" alt="" width="250px"></td>
