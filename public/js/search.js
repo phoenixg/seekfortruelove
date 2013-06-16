@@ -98,6 +98,20 @@ $(document).ready(function() {
 	
 });	
 
+// ajax 搜索中的运行图标
+$(function() {
+  $('#loading-indicator')
+    .hide()
+    .ajaxStart(function() {
+      $('#search').hide();
+      $(this).show();
+    })
+    .ajaxStop(function() {
+      $('#search').show();
+      $(this).hide();
+  	});
+});
+
 
 //slider
 $(document).ready(function() {
