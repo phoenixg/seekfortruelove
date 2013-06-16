@@ -139,6 +139,14 @@ Event::listen('logined', function($userId)
     ));
 });
 
+// 用户一修改资料或上传照片，就将审核状态置为1
+Event::listen('infoupdated', function($userId)
+{
+    User::update($userId, array(
+        'verified'          => 1
+    ));
+});
+
 /*
 |--------------------------------------------------------------------------
 | 路由过滤器

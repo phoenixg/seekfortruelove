@@ -65,7 +65,7 @@ class Account_Controller extends Base_Controller
 	{
 		//echo '<pre>';print_r(Input::get());die;
 
-		$id = trim(Input::get('id'));
+		$id = trim(Auth::user()->id);
 		$validation = User::validate_update(Input::all());
 
 		if ($validation->fails()) {
@@ -92,6 +92,10 @@ class Account_Controller extends Base_Controller
 				'salary' 			=> trim(Input::get('salary')),
 				'blog' 				=> trim(Input::get('blog'))
 			));
+
+			// 重置一下审核状态
+			$responses = Event::fire('infoupdated', array($id));
+
 			return Redirect::to_route('dashboard_profile', $id)
 				->with('message', '');
 		}
