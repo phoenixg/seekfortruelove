@@ -219,12 +219,13 @@ class User_Controller extends Base_Controller
         }
 
         // 获取被关注的信息
-        $watchers = DB::table('users_bewatched')
-                ->where('user_id', '=', $id)
-                ->take(20)
-                ->distinct()
-                ->order_by('watched_date', 'desc')
-                ->get(array('watcher_user_id'));
+        $watchers = DB::query('
+                    SELECT DISTINCT users_bewatched.watcher_user_id 
+                    FROM users_bewatched
+                    WHERE users_bewatched.watcher_user_id IN (SELECT images.user_id FROM images)
+                    AND users_bewatched.user_id = ? 
+                    ORDER BY users_bewatched.watched_date DESC
+                    LIMIT 20', array($id));
         
         return View::make('profile')
             ->with('iamallowed', $iamallowed)
