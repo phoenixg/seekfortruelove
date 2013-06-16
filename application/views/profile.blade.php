@@ -21,9 +21,9 @@
                 <li>
                     @if( File::exists( path('image_profile_icon').$user->id.'.jpg') )
                         {{ HTML::image('/images/profile/icon/'.$user->id.'.jpg', '头像', array('id' => 'icon')) }}
-                    @elseif(Auth::user()->sex == '男')
+                    @elseif($user->sex == '男')
                         {{ HTML::image('/images/profile/icon/'.'default.male.jpg',   '头像', array('id' => 'icon')) }}
-                    @elseif(Auth::user()->sex == '女')
+                    @elseif($user->sex == '女')
                         {{ HTML::image('/images/profile/icon/'.'default.female.jpg', '头像', array('id' => 'icon')) }}
                     @endif
                     <input type="hidden" value="{{ $user->id }}" id="userId" />
