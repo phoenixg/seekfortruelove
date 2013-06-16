@@ -144,7 +144,7 @@
             <div class="search_button">
                 <button id="search" class="btn btn-large btn-primary">搜索</button>
                 <span id="loading-indicator" class="livicon" data-n="spinner-four" data-s="64" data-c="original" 
-        data-hc="#000" data-a="1" data-l="0" data-i="3" data-d="0" data-et="hover" data-op="0"></span>
+        data-hc="#000" data-a="1" data-l="0" data-i="20" data-d="0" data-et="hover" data-op="0"></span>
             </div>  
         </div>
 
