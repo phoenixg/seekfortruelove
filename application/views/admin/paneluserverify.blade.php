@@ -7,6 +7,6 @@
 @endsection
 @section('main')
 
-	管理员的dashboard 叫做panel ，这是主页 暂放哦
+	审核用户
 
 @endsection

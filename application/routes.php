@@ -55,6 +55,8 @@ Route::post('admin/login',            array('as' => 'admin_login',            'u
 Route::get('admin/logout',            array('as' => 'admin_logout',           'uses' => 'admin.admin@logout'));
 Route::get('admin/dashboard',         array('as' => 'admin_dashboard',        'uses' => 'admin.dashboard@index'));
 Route::get('admin/dashboard/examine', array('as' => 'admin_dashboard_examine','uses' => 'admin.dashboard@examine'));
+Route::get('admin/userverify',        array('as' => 'admin_userverify',       'uses' => 'admin.dashboard@userverify'));
+
 
 //batch work
 Route::get('batch/sendmail',          array('as' => 'batch_sendmail',         'uses' => 'batch@sendmail'));
@@ -70,7 +72,7 @@ Route::controller(array(
 
 
 
-View::composer(array('layouts.default', 'layouts.dashboard', 'layouts.documents' , 'admin.panelindex'), function()
+View::composer(array('layouts.default', 'layouts.dashboard', 'layouts.documents' , 'layouts.admin'), function()
 {
     //CSS
     Asset::add('css-bootstrap', 'css/bootstrap.min.css');
@@ -193,8 +195,9 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::to('login');
 });
 
-// 原来的 TODO
+// admin下的dashboard必须有管理员的pass session才能访问
 Route::filter('auth_admin', function()
 {
-    return 'auth_admin';
+    if (!Session::has('pass') || (Session::get('pass') !== 1))
+        return Redirect::to_route('admin_login');
 });

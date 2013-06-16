@@ -94,9 +94,9 @@ SEEKFORTRUELOVE
     GET http://seekfortruelove.org/dashboard/personalad/           - 用户征婚启事
     GET http://seekfortruelove.org/dashboard/stats/                - 用户统计信息
 
+    GET http://seekfortruelove.org/admin/login                     - 管理员登录
     GET http://seekfortruelove.org/admin/dashboard/                - 管理员控制面板
     GET http://seekfortruelove.org/admin/dashboard/profile/        - 管理员个人信息
-    GET http://seekfortruelove.org/admin/manage/                   - 管理员登录
 
 ## TODO / MEMO ##
 - 禁止IE？

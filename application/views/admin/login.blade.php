@@ -1,5 +1,4 @@
-@layout('layouts.default')
-
+@layout('layouts.default')<!-- 这里使用普通用户的layouts没关系 -->
 @section('content')
 <div class="container">
 	<h1>管理员登录</h1>
