@@ -1,3 +1,7 @@
+#loading-indicator {
+    display: none;
+}
+
 .search_filter div#sex {
     padding: 18px 0;
 }
