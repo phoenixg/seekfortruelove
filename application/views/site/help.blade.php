@@ -26,9 +26,8 @@
 
     <h4><a name="anchor-imageuploadfail">为什么无法上传照片？</a></h4>
     <p>请确保上传的照片格式是JPG, PNG或GIF格式，大小在100K以内。</p>
-
-    <h4><a name="anchor-howresizeimage">照片大于100K，怎样压缩？</a></h4>
-    <p>可以点此下载&nbsp;<a href="http://url.cn/GN5OXR"
+ 
+    <p>如果照片大于100K，可以点此下载&nbsp;<a href="http://url.cn/GN5OXR"
         class="btn btn-mini" rel="sidebar" title="图片压缩工具" target="_blank">图片压缩工具</a>&nbsp;，使用方法见图：</p>
 
     <table>

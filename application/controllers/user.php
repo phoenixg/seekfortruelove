@@ -163,6 +163,10 @@ class User_Controller extends Base_Controller
     }
 
     public function get_profile($id) {
+        if( User::find($id) === null ) {
+            return Response::error('404');
+        }
+
         // 如果看的人不是自己，就往关注表里插入一条查看过TA的历史信息
         if( (int) Auth::user()->id !== (int) $id ){
             $insert = DB::table('users_bewatched')->insert(array(
