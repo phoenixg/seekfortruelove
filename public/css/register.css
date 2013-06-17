@@ -1,3 +1,8 @@
 #registerproblem {
     margin-top: 60px;
 }
+
+#captcha {
+	font-size: .9em;
+	font-family: monospace;
+}
