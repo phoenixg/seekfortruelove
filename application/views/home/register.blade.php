@@ -269,21 +269,21 @@
                     <div class="control-group">
                         <div class="controls">
                             <div id="captcha">
-                                <span>爱是恒久忍耐，又有恩慈；</span>
-                                <span>爱是不嫉妒；</span>
-                                <span>爱是不自夸，不张狂，</span>
-                                <span>不作害羞的事，不求自己的益处，</span>
-                                <span>不轻易发怒，不计算人的恶，</span>
-                                <span>不喜欢不义，只喜欢真理；</span>
-                                <span>凡事包容，凡事相信，</span>
-                                <span>凡事盼望，凡事忍耐。</span>
-                                <span>爱是永不止息</span>
+                                <div>爱是恒久忍耐，又有恩慈；爱是不嫉妒；爱是不自夸，不张狂，不作害羞的事，不求自己的益处，不轻易发怒，不计算人的恶，不喜欢不义，只喜欢真理；凡事包容，凡事相信，凡事盼望，凡事忍耐。爱是永不止息</div>
                                 <div class="verses">
-                                    <span class="verse wrong">歌 8:7</span>
-                                    <span class="verse correct">林前 13:4-8</span>
-                                    <span class="verse wrong">约 8:32</span>
-                                    <span class="verse wrong">弗 4:2</span>
-                                    <span class="verse wrong">提前 6:11</span>
+                                    <?php 
+                                        $verses = array(
+                                        '<span class="verse wrong">歌 8:7</span>',
+                                        '<span class="verse correct">林前 13:4-8</span>',
+                                        '<span class="verse wrong">约 8:32</span>',
+                                        '<span class="verse wrong">弗 4:2</span>',
+                                        '<span class="verse wrong">提前 6:11</span>'
+                                        );
+                                        shuffle($verses);
+                                        foreach ($verses as $verse) {
+                                            echo $verse;
+                                        }
+                                    ?>
                                 </div>
                             </div>
 
