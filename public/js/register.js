@@ -10,7 +10,7 @@ $(document).ready(function() {
         $(this).css({'background-color':'#028D79','color': '#eee'}).siblings().removeClass('choosen');
 
         if($(this).hasClass('correct')) {
-            $("input[type=submit]").removeAttr('disabled').attr('value', '选择正确 提交注册信息');
+            $("input[type=submit]").removeAttr('disabled').attr('value', '提交注册信息');
         } else {
             $("input[type=submit]").attr('disabled','disabled').attr('value', '请选择正确的出处');
         }
