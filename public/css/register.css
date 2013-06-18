@@ -4,5 +4,27 @@
 
 #captcha {
 	font-size: .9em;
+    font-style: italic;
 	font-family: monospace;
+}
+
+#captcha .verses {
+    margin-top: 6px;
+}
+
+#captcha .verse{
+    font-size: .9em;
+    font-style: normal;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    margin: 0 20px 0 0;
+    color:#555;
+    background-color: #eee;
+}
+
+#captcha .verse:hover{
+    cursor: pointer;
+    background-color: #028D79;
+    color: #eee;
 }

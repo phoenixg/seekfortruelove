@@ -278,7 +278,13 @@
                                 <span>凡事包容，凡事相信，</span>
                                 <span>凡事盼望，凡事忍耐。</span>
                                 <span>爱是永不止息</span>
-                                <span>[ 林前 13:4-8 ]</span>
+                                <div class="verses">
+                                    <span class="verse wrong">歌 8:7</span>
+                                    <span class="verse correct">林前 13:4-8</span>
+                                    <span class="verse wrong">约 8:32</span>
+                                    <span class="verse wrong">弗 4:2</span>
+                                    <span class="verse wrong">提前 6:11</span>
+                                </div>
                             </div>
 
 
